@@ -12,6 +12,7 @@
 		4AE31205195EA67600923143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE31203195EA67600923143 /* Main.storyboard */; };
 		4AE31207195EA67600923143 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE31206195EA67600923143 /* Images.xcassets */; };
 		4AE31213195EA67600923143 /* TapColorsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE31212195EA67600923143 /* TapColorsSwiftTests.swift */; };
+		4AE3121F195ED00600923143 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE3121E195ED00600923143 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		4AE3120C195EA67600923143 /* TapColorsSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapColorsSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE31211195EA67600923143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AE31212195EA67600923143 /* TapColorsSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapColorsSwiftTests.swift; sourceTree = "<group>"; };
+		4AE3121E195ED00600923143 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE3121F195ED00600923143 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +60,7 @@
 		4AE311F1195EA67600923143 = {
 			isa = PBXGroup;
 			children = (
+				4AE3121E195ED00600923143 /* QuartzCore.framework */,
 				4AE311FC195EA67600923143 /* TapColorsSwift */,
 				4AE3120F195EA67600923143 /* TapColorsSwiftTests */,
 				4AE311FB195EA67600923143 /* Products */,
@@ -326,6 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TapColorsSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -337,6 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TapColorsSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -397,6 +403,7 @@
 				4AE31218195EA67600923143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4AE31219195EA67600923143 /* Build configuration list for PBXNativeTarget "TapColorsSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +412,7 @@
 				4AE3121B195EA67600923143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
