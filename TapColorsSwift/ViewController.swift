@@ -9,10 +9,10 @@
 import UIKit
 import QuartzCore
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     private var colorCombination = [UIColor]()
-    private let colorPalletCombination: [UIColor] = [.redColor(), .blueColor(), .greenColor(), .yellowColor()]
+    private let colorPalletCombination: [UIColor] = [.red, .blue, .green, .yellow]
     private var position: Int = 0
     
     override func viewDidLoad() {
@@ -26,22 +26,22 @@ class ViewController: UIViewController {
     private func newGame() {
         position = 0
         colorCombination = produceColorCombination()
-        makeLabelsFromArray(colorCombination)
+        makeLabels(array: colorCombination)
     }
     
-    private func makeLabelsFromArray(array: [UIColor]) {
+    private func makeLabels(array: [UIColor]) {
         var x: CGFloat = 40
         let xSkip: CGFloat = 65
         let y: CGFloat = 60
-        for (i, color) in array.enumerate() {
-            let rect = CGRectMake(x, y, 60, 60);
+        for (i, color) in array.enumerated() {
+            let rect = CGRect(x: x, y: y, width: 60, height: 60);
             let label = UILabel(frame: rect)
             label.tag = i + 101
             label.backgroundColor = color
             view.addSubview(label)
             x += xSkip
             if i == 0 {
-                label.layer.borderColor = UIColor.blackColor().CGColor
+                label.layer.borderColor = UIColor.black.cgColor
                 label.layer.borderWidth = 5.0
             }
         }
@@ -52,18 +52,18 @@ class ViewController: UIViewController {
         return Array(0 ..< 4).map {_ in colorPalletCombination[Int(arc4random_uniform(UInt32(4)))]}
     }
     
-    @IBAction private func buttonPressed(button: UIButton) {
+    @IBAction private func buttonPressed(_ button: UIButton) {
         // check color
         if colorCombination[position] == button.backgroundColor {
             let label = view.viewWithTag(position + 101) as! UILabel
             label.removeFromSuperview()
             
-            position++
+            position += 1
             
             if position < 4 {
                 
                 let targetLabel = view.viewWithTag(position + 101) as! UILabel
-                targetLabel.layer.borderColor = UIColor.blackColor().CGColor
+                targetLabel.layer.borderColor = UIColor.black.cgColor
                 targetLabel.layer.borderWidth = 5.0
             }
         }
